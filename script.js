@@ -184,38 +184,56 @@ function initParallax() {
 function initModal() {
     const modal = document.getElementById('terms-modal');
     const openBtn = document.getElementById('open-terms');
+    const openDisclaimerBtn = document.getElementById('open-disclaimer');
+    const openPrivacyBtn = document.getElementById('open-privacy');
     const closeBtn = document.querySelector('.close-btn');
     const acceptBtn = document.getElementById('accept-terms');
 
-    if (!modal || !openBtn) return;
+    if (!modal) return;
 
-    // Open Modal
-    openBtn.addEventListener('click', (e) => {
-        e.preventDefault();
+    const openModal = (e, scrollTargetId = null) => {
+        if (e) e.preventDefault();
         modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Disable scroll
-    });
+        document.body.style.overflow = 'hidden';
 
-    // Close Actions
+        if (scrollTargetId) {
+            // Wait for display block to apply before scrolling
+            setTimeout(() => {
+                const target = document.getElementById(scrollTargetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
+        } else {
+            // Scroll to top if general terms
+            const content = modal.querySelector('.modal-content');
+            if (content) content.scrollTop = 0;
+        }
+    };
+
+    if (openBtn) openBtn.addEventListener('click', (e) => openModal(e));
+
+    if (openDisclaimerBtn) {
+        openDisclaimerBtn.addEventListener('click', (e) => openModal(e, 'disclaimer'));
+    }
+
+    if (openPrivacyBtn) {
+        openPrivacyBtn.addEventListener('click', (e) => openModal(e, 'privacy'));
+    }
+
     const closeModal = () => {
         modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Enable scroll
+        document.body.style.overflow = 'auto';
     };
 
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
     if (acceptBtn) acceptBtn.addEventListener('click', closeModal);
 
-    // Close on click outside
     window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
+        if (e.target === modal) closeModal();
     });
 
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.style.display === 'flex') {
-            closeModal();
-        }
+        if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
     });
 }
