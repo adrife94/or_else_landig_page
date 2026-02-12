@@ -478,142 +478,59 @@ h4 {
     padding: 32px;
 }
 
-/* Showcase */
-.showcase-card {
+/* Cycle of Discipline (How It Works) */
+.steps-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.stats-grid {
-    display: flex;
-    gap: 40px;
-    margin: 32px 0;
-}
-
-.stat-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-number {
-    font-size: 3rem;
-    font-weight: 800;
-    font-family: var(--font-display);
-    line-height: 1;
-}
-
-.stat-unit {
-    font-size: 1.5rem;
-    color: var(--primary-500);
-}
-
-.stat-label {
-    color: var(--text-tertiary);
-    font-size: 0.9rem;
-    margin-top: 8px;
-}
-
-.dashboard-mockup {
-    height: 300px;
-    position: relative;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 0, 0, 0.3);
-}
-
-.mockup-header {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-
-.dot.red {
-    background: #ff5f56;
-}
-
-.dot.yellow {
-    background: #ffbd2e;
-}
-
-.dot.green {
-    background: #27c93f;
-}
-
-.mockup-body {
-    height: calc(100% - 30px);
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0 10px;
-}
-
-.bar {
-    width: 15%;
-    background: linear-gradient(to top, var(--primary-700), var(--primary-500));
-    border-radius: 4px 4px 0 0;
-    transition: height 1s ease;
-}
-
-/* Testimonials */
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 32px;
     margin-top: 40px;
 }
 
-.testimonial-card {
+.step-card {
+    padding: 32px 24px;
+    text-align: center;
     position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(24, 24, 27, 0.4);
 }
 
-.quote-mark {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.step-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-500);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
+}
+
+.step-number {
     font-size: 4rem;
-    color: rgba(255, 0, 0, 0.2);
-    font-family: serif;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    top: 10px;
+    right: 20px;
     line-height: 1;
+    font-family: var(--font-display);
 }
 
-.testimonial-text {
-    font-size: 1.1rem;
-    font-style: italic;
+.step-icon {
+    font-size: 3rem;
     margin-bottom: 24px;
+    display: block;
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.3));
 }
 
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+.step-title {
+    color: var(--primary-500);
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
-.author-avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 2px solid var(--primary-500);
-}
-
-.author-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.author-name {
-    font-weight: 600;
-}
-
-.author-role {
-    font-size: 0.9rem;
-    color: var(--text-tertiary);
+.step-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* CTA Final */
@@ -623,6 +540,114 @@ h4 {
     margin: 0 auto;
     border: 1px solid var(--primary-500);
     box-shadow: 0 0 50px rgba(255, 0, 0, 0.2);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #09090b;
+    border: 1px solid var(--primary-500);
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: var(--text-secondary);
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.close-btn:hover {
+    color: var(--primary-500);
+}
+
+.modal-header {
+    padding: 30px 30px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.last-updated {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+}
+
+.modal-body {
+    padding: 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.modal-body h3 {
+    color: var(--text-primary);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-family: var(--font-display);
+    border-left: 3px solid var(--primary-500);
+    padding-left: 10px;
+}
+
+.modal-body h4 {
+    color: var(--text-primary);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.legal-warning {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid var(--primary-500);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.modal-body ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-body li {
+    margin-bottom: 8px;
+}
+
+.modal-footer {
+    padding: 20px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .cta-title {

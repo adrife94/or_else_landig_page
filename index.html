@@ -322,53 +322,40 @@
         </div>
     </section>
 
-    <!-- Showcase / Dashboard -->
+    <!-- How It Works / Methodology -->
     <section id="how-it-works" class="showcase section-padding">
         <div class="container">
-            <div class="glass-card showcase-card">
-                <div class="showcase-content">
-                    <h2 class="section-title">EL <span class="text-gradient">CUARTO DE GUERRA</span></h2>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-number glow-text" data-target="98">0</span><span
-                                class="stat-unit">%</span>
-                            <span class="stat-label">Tasa de Éxito</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number glow-text" data-target="1500">0</span><span
-                                class="stat-unit">h</span>
-                            <span class="stat-label">Tiempo de Foco</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number glow-text" data-target="50">0</span><span
-                                class="stat-unit">k</span>
-                            <span class="stat-label">Excusas Destruidas</span>
-                        </div>
-                    </div>
-                    <p class="showcase-text">
-                        Visualiza tu disciplina. Rastrea cada victoria. Lamenta cada derrota.
-                        Nuestro dashboard te dice la verdad sobre tu rendimiento. Sin filtros.
-                    </p>
+            <div class="section-header">
+                <h2 class="section-title">CICLO DE <span class="text-gradient">DISCIPLINA</span></h2>
+                <p class="section-subtitle">Tres pasos. Sin excusas. Sin piedad.</p>
+            </div>
+
+            <div class="steps-grid">
+                <!-- Step 1 -->
+                <div class="step-card glass-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">🎯</div>
+                    <h3 class="step-title">COMPROMISO</h3>
+                    <p class="step-desc">Selecciona un Protocolo y establece tu hora límite. Una vez activado, no hay
+                        marcha atrás. El contrato está firmado.</p>
                 </div>
-                <div class="showcase-visual">
-                    <!-- Placeholder representing dashboard UI in 3D perspective -->
-                    <div class="dashboard-mockup glass-card">
-                        <div class="mockup-header">
-                            <div class="dot red"></div>
-                            <div class="dot yellow"></div>
-                            <div class="dot green"></div>
-                        </div>
-                        <div class="mockup-body">
-                            <div class="graph-line"></div>
-                            <div class="graph-bars">
-                                <div class="bar" style="height: 40%"></div>
-                                <div class="bar" style="height: 70%"></div>
-                                <div class="bar" style="height: 50%"></div>
-                                <div class="bar" style="height: 90%"></div>
-                                <div class="bar" style="height: 20%; background: #ff0000;"></div>
-                            </div>
-                        </div>
-                    </div>
+
+                <!-- Step 2 -->
+                <div class="step-card glass-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">⚡</div>
+                    <h3 class="step-title">VERIFICACIÓN</h3>
+                    <p class="step-desc">El sistema exige pruebas. GPS, Foto, Sensores o Código QR. Si no puedes
+                        probarlo, no sucedió.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card glass-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">💀</div>
+                    <h3 class="step-title">SENTENCIA</h3>
+                    <p class="step-desc">¿Fallaste? El sistema ejecuta la Sanción inmediatamente. Cúmplela para
+                        desbloquear tu vida digital.</p>
                 </div>
             </div>
         </div>
@@ -606,7 +593,7 @@
                     <h4>Legal</h4>
                     <a href="#">Renuncia de Responsabilidad</a>
                     <a href="#">Privacidad (Te observamos)</a>
-                    <a href="#">Términos de Castigo</a>
+                    <a href="#" id="open-terms">Términos de Castigo</a>
                 </div>
                 <div class="footer-col">
                     <h4>Conectar</h4>
@@ -620,6 +607,85 @@
             </div>
         </div>
     </footer>
+
+    <!-- Terms Modal -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2>PROTOCOLOS OPERATIVOS & <span class="text-gradient">TÉRMINOS DE SERVICIO</span></h2>
+                <p class="last-updated">Última actualización: HOY</p>
+            </div>
+            <div class="modal-body">
+                <p class="legal-intro">Bienvenido a OR ELSE. Al descargar o usar esta aplicación, usted (en adelante "El
+                    Operativo") acepta vincularse legalmente a los siguientes términos con OR ELSE HQ.</p>
+
+                <div class="legal-warning">
+                    <p>⚠️ SI NO ACEPTA PERDER DINERO POR SU FALTA DE DISCIPLINA, BORRE ESTA APLICACIÓN INMEDIATAMENTE.
+                    </p>
+                </div>
+
+                <h3>1. LA NATURALEZA DEL SERVICIO</h3>
+                <p>OR ELSE no es una alarma convencional. Es una herramienta de responsabilidad financiera. El Operativo
+                    reconoce que el objetivo de la aplicación es cobrar una Tarifa de Servicio (Penalty) en caso de
+                    incumplimiento de los protocolos establecidos por el propio usuario.</p>
+
+                <h3>2. MECÁNICA DE PAGO Y PENALIZACIONES</h3>
+                <h4>2.1. El Compromiso (The Pledge)</h4>
+                <p>Al pulsar el botón "COMMIT", El Operativo autoriza a HQ a realizar un cargo futuro en su método de
+                    pago si no se verifica el cumplimiento del protocolo (escanear el código de barras) antes de la hora
+                    límite.</p>
+
+                <h4>2.2. Detección de Fallo y Retención</h4>
+                <p>Si el servidor de HQ no recibe la confirmación de éxito a la hora establecida (+ tiempo de gracia):
+                    Se considerará MISIÓN FALLIDA. HQ iniciará inmediatamente una Retención de Fondos (Authorization) en
+                    la tarjeta vinculada por el valor acordado (ej: 10€). Estos fondos quedarán bloqueados temporalmente
+                    a la espera de confirmación final.</p>
+
+                <h4>2.3. Ejecución del Cargo (Capture)</h4>
+                <p>Pasadas 24 horas desde el fallo, si no se ha recibido prueba telemétrica tardía, la retención se
+                    convertirá en un cargo definitivo (Capture). Este cargo no es reembolsable.</p>
+
+                <h3>3. PROTOCOLO DE CONECTIVIDAD Y "CAJA NEGRA"</h3>
+                <h4>3.1. Modo Sin Conexión</h4>
+                <p>El Operativo acepta que la falta de conexión a internet no es excusa válida. La aplicación registra
+                    el escaneo exitoso localmente ("Caja Negra") y sube la prueba encriptada cuando recupera conexión.
+                    Es responsabilidad del Operativo conectar el dispositivo dentro de las 24 horas post-fallo.</p>
+
+                <h4>3.2. Supremacía de los Datos</h4>
+                <p>En caso de disputa, los registros del servidor (Logs) prevalecen sobre la palabra del usuario. No se
+                    aceptarán capturas de pantalla, vídeos externos ni testimonios como prueba. Solo la telemetría
+                    interna de la app.</p>
+
+                <h3>4. EXENCIONES DE RESPONSABILIDAD (NO EXCUSES POLICY)</h3>
+                <p>HQ NO aceptará apelaciones ni realizará reembolsos por fallos debidos a negligencia logística del
+                    Operativo, incluyendo:</p>
+                <ul>
+                    <li>❌ Batería del dispositivo agotada durante la noche.</li>
+                    <li>❌ Dispositivo en modo "No Molestar" o volumen silenciado.</li>
+                    <li>❌ Pérdida, daño o extravío del objeto de verificación (Código de Barras).</li>
+                    <li>❌ Fallo en la cámara del dispositivo (Use el "Test Scanner" antes).</li>
+                    <li>❌ Quedarse dormido de nuevo tras escanear el código.</li>
+                </ul>
+
+                <h3>5. FALLOS TÉCNICOS DEL SERVICIO</h3>
+                <p>En el caso excepcional de que un fallo técnico atribuible al software de OR ELSE (bug verificado)
+                    provoque un cargo erróneo, se procederá al reembolso íntegro tras verificar los logs (Crashlytics).
+                </p>
+
+                <h3>6. SEGURIDAD Y PAGOS</h3>
+                <p>OR ELSE no almacena los datos completos de su tarjeta. Los pagos son procesados por Stripe Inc. Al
+                    usar el servicio, usted acepta los términos de Stripe.</p>
+
+                <h3>7. SALUD Y SEGURIDAD FÍSICA</h3>
+                <p>El Operativo asume toda la responsabilidad por su bienestar físico. HQ no se hace responsable de
+                    lesiones al levantarse apresuradamente ni de daños consecuentes por fallos técnicos.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" id="accept-terms">ENTENDIDO Y ACEPTADO</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
