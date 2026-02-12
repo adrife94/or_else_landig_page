@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OR ELSE - Disciplina o Arrepentimiento</title>
+    <meta name="description"
+        content="La única aplicación de productividad que castiga por fallar. Disciplina militar para erradicar la procrastinación.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="particles-container"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="OR ELSE" class="logo-img"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                <span class="logo-text"
+                    style="display:none; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.5rem; color: #fff;">OR
+                    ELSE</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Protocolos</a>
+                <a href="#how-it-works" class="nav-link">Cómo Funciona</a>
+                <a href="#punishments" class="nav-link">Consecuencias</a>
+                <a href="#download" class="btn-primary">Alistarse</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-label">
+                    <span class="label-icon">⚠️</span> ALERTA: RESPONSABILIDAD EXTREMA
+                </div>
+                <h1 class="hero-title">
+                    DISCIPLINA O <span class="text-gradient">ARREPENTIMIENTO.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    La única aplicación de productividad que no te premia por intentar.<br>
+                    Te castiga por fallar. Bienvenido a la disciplina militar.
+                </p>
+                <div class="hero-cta">
+                    <a href="#download" class="btn-primary glow-primary">ACEPTAR EL RETO</a>
+                    <a href="#features" class="btn-secondary">Ver Protocolos</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="sphere-container">
+                    <div class="sphere">
+                        <div class="sphere-inner"></div>
+                    </div>
+                </div>
+                <img src="images/hero_visual.png" alt="Centro de Comando" class="hero-img floating"
+                    onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <p class="social-proof-text">CONFIANZA DE 10,000+ OPERATIVOS DISCIPLINADOS</p>
+            <div class="logos-grid">
+                <!-- Placeholders for partner logos -->
+                <div class="partner-logo">COMMAND</div>
+                <div class="partner-logo">FOCUS</div>
+                <div class="partner-logo">GRID</div>
+                <div class="partner-logo">CORE</div>
+                <div class="partner-logo">ALPHA</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Features (Flip Cards) -->
+    <section id="features" class="features section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">PROTOCOLOS <span class="text-gradient">OPERATIVOS</span></h2>
+                <p class="section-subtitle">No sugerimos hábitos. Los imponemos mediante verificación por hardware.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- 3.1 WAKE UP CALL -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <img src="images/service_1.png" alt="Wake Up Call" class="service-image"
+                                onerror="this.src='https://placehold.co/800x600/18181b/ff0000?text=Wake+Up+Call'">
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">1. WAKE UP CALL</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">WAKE UP CALL</h3>
+                            <p class="service-description">Erradica la pereza matutina. Confirma actividad consciente
+                                antes de la hora límite (06:00 AM).</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Anti-Snooze</span>
+                                <span class="feature-tag">Inicio Operativo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3.2 CURFEW -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <img src="images/service_2.png" alt="Toque de Queda" class="service-image"
+                                onerror="this.src='https://placehold.co/800x600/18181b/ff0000?text=Curfew'">
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">2. CURFEW</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">CURFEW (Toque de Queda)</h3>
+                            <p class="service-description">Control de pernocta. Debes estar físicamente en las
+                                coordenadas de la "Base" a la hora designada (23:00 PM).</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Geofencing</span>
+                                <span class="feature-tag">Descanso Obligatorio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3.3 GYM RAT -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <img src="images/service_3.png" alt="Gym Rat" class="service-image"
+                                onerror="this.src='https://placehold.co/800x600/18181b/ff0000?text=Gym+Rat'">
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">3. GYM RAT</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">GYM RAT (Control de Sector)</h3>
+                            <p class="service-description">Disciplina de entorno. Permanencia obligatoria en ubicación
+                                productiva (Gimnasio/Biblioteca) por 60 min.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">GPS Check-in</span>
+                                <span class="feature-tag">Permanencia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3.4 DEEP WORK -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <img src="images/service_4.png" alt="Deep Work" class="service-image"
+                                onerror="this.src='https://placehold.co/800x600/18181b/ff0000?text=Deep+Work'">
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">4. DEEP WORK</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">DEEP WORK (Aislamiento)</h3>
+                            <p class="service-description">Eliminación de distracciones. Prohibida la manipulación del
+                                dispositivo móvil durante el bloque de tiempo.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Bloqueo Total</span>
+                                <span class="feature-tag">Enfoque</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3.5 RUCKING CARDIO -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <img src="images/service_5.png" alt="Rucking Cardio" class="service-image"
+                                onerror="this.src='https://placehold.co/800x600/18181b/ff0000?text=Rucking+Cardio'">
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">5. RUCKING CARDIO</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">RUCKING CARDIO</h3>
+                            <p class="service-description">Resistencia física. Cubrir una distancia mínima (ej. 3km)
+                                manteniendo un ritmo de marcha constante.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Podómetro</span>
+                                <span class="feature-tag">Ritmo Cardiaco</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3.6 RADIO SILENCE -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <img src="images/service_6.png" alt="Radio Silence" class="service-image"
+                                onerror="this.src='https://placehold.co/800x600/18181b/ff0000?text=Radio+Silence'">
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">6. RADIO SILENCE</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">RADIO SILENCE</h3>
+                            <p class="service-description">Desconexión digital total. No emitir señal. El teléfono debe
+                                permanecer sin interacción humana.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Modo Avión</span>
+                                <span class="feature-tag">Invisibilidad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3.7 ON-SITE REPORT -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <img src="images/service_7.png" alt="On-Site Report" class="service-image"
+                                onerror="this.src='https://placehold.co/800x600/18181b/ff0000?text=On-Site+Report'">
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">7. ON-SITE REPORT</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">ON-SITE REPORT</h3>
+                            <p class="service-description">Confirmación visual puntual. Llegar a un punto específico y
+                                "fichar" (Cima, Oficina, Checkpoint).</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Foto Verificada</span>
+                                <span class="feature-tag">Puntualidad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3.8 SKILL DRILL -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <img src="images/service_8.png" alt="Skill Drill" class="service-image"
+                                onerror="this.src='https://placehold.co/800x600/18181b/ff0000?text=Skill+Drill'">
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">8. SKILL DRILL</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">SKILL DRILL</h3>
+                            <p class="service-description">Adquisición forzosa de competencias. 15 min de uso activo en
+                                app productiva (Duolingo, Kindle, etc).</p>
+                            <div class="service-features">
+                                <span class="feature-tag">App Usage Track</span>
+                                <span class="feature-tag">Aprendizaje</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3.9 COMMS CHECK -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <img src="images/service_9.png" alt="Comms Check" class="service-image"
+                                onerror="this.src='https://placehold.co/800x600/18181b/ff0000?text=Comms+Check'">
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">9. COMMS CHECK</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">COMMS CHECK</h3>
+                            <p class="service-description">Mantenimiento de enlaces. Llamada obligatoria a "Contacto
+                                VIP" (Madre, Pareja) min 5 minutos.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Call Log Verify</span>
+                                <span class="feature-tag">Relaciones</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3.10 CANINE PATROL -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <img src="images/service_10.png" alt="Canine Patrol" class="service-image"
+                                onerror="this.src='https://placehold.co/800x600/18181b/ff0000?text=Canine+Patrol'">
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">10. CANINE PATROL</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">CANINE PATROL (K9)</h3>
+                            <p class="service-description">Responsabilidad biológica. Paseo obligatorio de la mascota a
+                                distancia y tiempos establecidos.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Cuidado Animal</span>
+                                <span class="feature-tag">Aire Libre</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase / Dashboard -->
+    <section id="how-it-works" class="showcase section-padding">
+        <div class="container">
+            <div class="glass-card showcase-card">
+                <div class="showcase-content">
+                    <h2 class="section-title">EL <span class="text-gradient">CUARTO DE GUERRA</span></h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number glow-text" data-target="98">0</span><span
+                                class="stat-unit">%</span>
+                            <span class="stat-label">Tasa de Éxito</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number glow-text" data-target="1500">0</span><span
+                                class="stat-unit">h</span>
+                            <span class="stat-label">Tiempo de Foco</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number glow-text" data-target="50">0</span><span
+                                class="stat-unit">k</span>
+                            <span class="stat-label">Excusas Destruidas</span>
+                        </div>
+                    </div>
+                    <p class="showcase-text">
+                        Visualiza tu disciplina. Rastrea cada victoria. Lamenta cada derrota.
+                        Nuestro dashboard te dice la verdad sobre tu rendimiento. Sin filtros.
+                    </p>
+                </div>
+                <div class="showcase-visual">
+                    <!-- Placeholder representing dashboard UI in 3D perspective -->
+                    <div class="dashboard-mockup glass-card">
+                        <div class="mockup-header">
+                            <div class="dot red"></div>
+                            <div class="dot yellow"></div>
+                            <div class="dot green"></div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="graph-line"></div>
+                            <div class="graph-bars">
+                                <div class="bar" style="height: 40%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                                <div class="bar" style="height: 50%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                                <div class="bar" style="height: 20%; background: #ff0000;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="punishments" class="testimonials section-padding">
+        <div class="container">
+            <h2 class="section-title center">HISTORIAS DE <span class="text-gradient">SOBREVIVIENTES</span></h2>
+            <div class="testimonials-grid">
+                <div class="glass-card testimonial-card">
+                    <div class="quote-mark">“</div>
+                    <p class="testimonial-text">Solía procrastinar. Entonces OR ELSE donó $500 al partido político que
+                        odio. No he fallado una fecha límite desde entonces.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background-color: #333;"></div>
+                        <div class="author-info">
+                            <span class="author-name">Alex K.</span>
+                            <span class="author-role">Ingeniero de Software</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card testimonial-card">
+                    <div class="quote-mark">“</div>
+                    <p class="testimonial-text">Brutal. Imperdonable. Absolutamente necesario. La función de vergüenza
+                        pública me aterrorizó hacia la productividad.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background-color: #333;"></div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah M.</span>
+                            <span class="author-role">Fundadora</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="download" class="cta-final section-padding">
+        <div class="container">
+            <div class="cta-box glass-card glow-border">
+                <h2 class="cta-title">¿LISTO PARA <span class="text-gradient">SUFRIR?</span></h2>
+                <p class="cta-subtitle">La disciplina es libertad. Pero primero, es dolor. Descarga ahora y firma tu
+                    vida.</p>
+                <button class="btn-primary btn-large pulse-animation">INSTALAR - PENA DE $50 AL DESINSTALAR</button>
+                <p class="cta-disclaimer">Al hacer clic, aceptas todas las consecuencias.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">OR ELSE</h3>
+                    <p class="footer-desc">La última aplicación de productividad que necesitarás.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Protocolo</h4>
+                    <a href="#">Manifiesto</a>
+                    <a href="#">Ciencia del Miedo</a>
+                    <a href="#">Muro de la Vergüenza</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Renuncia de Responsabilidad</a>
+                    <a href="#">Privacidad (Te observamos)</a>
+                    <a href="#">Términos de Castigo</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Conectar</h4>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Discord</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OR ELSE Inc. Todos los arrepentimientos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
