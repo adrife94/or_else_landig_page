@@ -841,3 +841,189 @@ h4 {
 .mobile-menu-toggle {
     display: none;
 }
+/* Bullet System */
+.bullet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.bullet-info {
+    padding-right: 24px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bullet-mechanics {
+    padding-left: 24px;
+}
+
+.bullet-list {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.bullet-list li {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+}
+
+.bullet-list .icon {
+    font-size: 2rem;
+    background: rgba(255, 0, 0, 0.1);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.bullet-list h4 {
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.bullet-list p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.highlight-red {
+    color: var(--primary-500);
+    font-weight: bold;
+}
+
+/* Rank Progression */
+.rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.rank-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    background: rgba(24, 24, 27, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.rank-card:hover {
+    border-color: var(--primary-500);
+    background: rgba(24, 24, 27, 0.8);
+    transform: translateX(10px);
+}
+
+.rank-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+}
+
+.rank-badge {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-tertiary);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.rank-card:hover .rank-badge {
+    border-color: var(--primary-500);
+    color: var(--primary-500);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.rank-info h3 {
+    margin-bottom: 4px;
+    font-size: 1.2rem;
+}
+
+.rank-points {
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.rank-perks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.perk {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.perk.highlight {
+    background: rgba(255, 0, 0, 0.1);
+    color: var(--primary-500);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.perk .label {
+    color: var(--text-tertiary);
+    margin-right: 4px;
+}
+
+/* Rank Specific Styles */
+.rank-card.legend {
+    border: 1px solid var(--primary-500);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+}
+
+.rank-card.legend .rank-badge {
+    background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-600) 100%);
+    color: white;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .bullet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bullet-info {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 24px;
+        padding-right: 0;
+        margin-bottom: 24px;
+    }
+
+    .bullet-mechanics {
+        padding-left: 0;
+    }
+
+    .rank-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .rank-header {
+        width: 100%;
+    }
+
+    .rank-perks {
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 84px; /* Align with text */
+    }
+}
