@@ -149,17 +149,8 @@ function initMobileMenu() {
 
     if (toggle) {
         toggle.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = 'rgba(0,0,0,0.95)';
-                navLinks.style.padding = '20px';
-                navLinks.style.borderBottom = '1px solid #333';
-            }
+            navLinks.classList.toggle('active');
+            toggle.classList.toggle('active');
         });
     }
 }
