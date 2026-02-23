@@ -784,6 +784,137 @@ h4 {
     }
 }
 
+/* Bullet System */
+.bullet-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .bullet-content {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+    }
+}
+
+.bullet-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .bullet-grid {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.bullet-info {
+    flex: 1;
+}
+
+.bullet-visual {
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bullet-icon {
+    font-size: 5rem;
+    color: var(--primary-500);
+    text-shadow: 0 0 20px var(--primary-500);
+    animation: pulse-glow 3s infinite;
+    line-height: 1;
+}
+
+.bullet-rules {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.bullet-rules li {
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+}
+
+/* Rank System */
+.ranks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.rank-card {
+    /* Extending glass-card logic but ensuring flex layout */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.rank-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-500);
+}
+
+.rank-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.rank-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+.rank-points {
+    font-family: var(--font-mono);
+    color: var(--primary-500);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.rank-perks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rank-perks li {
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.rank-perks li::before {
+    content: '►';
+    color: var(--primary-500);
+    font-size: 0.7rem;
+}
+
+/* Special styling for Legend */
+.rank-card.legend-rank {
+    border-color: var(--primary-500);
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.05) 0%, rgba(24, 24, 27, 0.6) 100%);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .hero-title {
