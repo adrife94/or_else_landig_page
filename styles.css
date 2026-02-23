@@ -827,11 +827,11 @@ h4 {
 }
 
 .bullet-icon {
-    font-size: 5rem;
+    width: 80px;
+    height: auto;
     color: var(--primary-500);
-    text-shadow: 0 0 20px var(--primary-500);
+    filter: drop-shadow(0 0 10px var(--primary-500));
     animation: pulse-glow 3s infinite;
-    line-height: 1;
 }
 
 .bullet-rules {
