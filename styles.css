@@ -344,20 +344,9 @@ h4 {
 }
 
 /* Features - Flip Cards */
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-title {
-    font-size: 3rem;
-    margin-bottom: 16px;
-}
-
-.section-subtitle {
-    color: var(--text-tertiary);
-    font-size: 1.2rem;
-}
+/* =========================================
+   FEATURES & PUNISHMENTS - FLIP CARDS (DEFINITIVO)
+   ========================================= */
 
 .services-grid {
     display: grid;
@@ -367,7 +356,8 @@ h4 {
 
 .service-card-flip {
     background-color: transparent;
-    perspective: 1000px;
+    perspective: 1500px;
+    /* Aumentado para que el giro 3D sea más limpio */
     height: 400px;
     cursor: pointer;
 }
@@ -376,8 +366,7 @@ h4 {
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
 }
 
@@ -385,44 +374,34 @@ h4 {
     transform: rotateY(180deg);
 }
 
+/* CARAS FRONTAL Y TRASERA: Configuración estricta */
 .service-card-front,
 .service-card-back {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 24px;
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    border-radius: 16px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: var(--bg-tertiary);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transform: translateZ(0);
+    /* Fuerza al navegador a usar aceleración 3D */
 }
 
+/* --- PARTE DELANTERA --- */
 .service-card-front {
-    color: white;
-}
-
-.service-card-back {
-    transform: rotateY(180deg);
-    background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 32px;
-    border: 1px solid var(--primary-500);
+    background-color: var(--bg-tertiary);
+    z-index: 2;
+    /* Obliga a estar delante */
+    transform: rotateY(0deg);
 }
 
 .service-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s;
-}
-
-.service-card-flip:hover .service-image {
-    transform: scale(1.05);
 }
 
 .service-overlay {
@@ -430,43 +409,68 @@ h4 {
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     padding: 24px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-    text-align: left;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
 }
 
 .service-title-front {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 800;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    line-height: 1.2;
 }
 
-.service-title-back {
+.service-method-front {
     color: var(--primary-500);
-    margin-bottom: 16px;
-    font-size: 1.8rem;
-}
-
-.service-description {
-    color: var(--text-secondary);
-    margin-bottom: 24px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 0;
 }
 
 .service-features {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    justify-content: center;
+    margin-top: 8px;
 }
 
 .feature-tag {
-    background: rgba(255, 0, 0, 0.2);
-    color: var(--text-primary);
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 0.8rem;
+    background: rgba(255, 0, 0, 0.15);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
     border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+/* --- PARTE TRASERA --- */
+.service-card-back {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--primary-500);
+    transform: rotateY(180deg);
+    z-index: 1;
+    /* Obliga a estar detrás */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+}
+
+.service-card-back .service-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--text-secondary);
+    margin: 0;
 }
 
 /* Glass Card Generic */
