@@ -937,9 +937,21 @@ h4 {
         text-align: center;
     }
 
-    .hero-label,
-    .hero-cta {
+    .hero-label {
         justify-content: center;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 16px;
+    }
+
+    .hero-cta a {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
     }
 
     .hero-visual {
@@ -983,16 +995,6 @@ h4 {
         grid-template-columns: 1fr;
     }
 
-    .hero-cta {
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
-    }
-
-    .hero-cta a {
-        width: 100%;
-        text-align: center;
-    }
 }
 
 .mobile-menu-toggle {
