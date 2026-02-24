@@ -982,6 +982,17 @@ h4 {
     .footer-grid {
         grid-template-columns: 1fr;
     }
+
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-cta a {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .mobile-menu-toggle {
