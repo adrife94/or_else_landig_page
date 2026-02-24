@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initParallax();
     initModal();
+    initPrivacyPolicyModal();
 });
 
 // 1. Particle System
@@ -186,10 +187,11 @@ function initModal() {
     const openBtn = document.getElementById('open-terms');
     const openDisclaimerBtn = document.getElementById('open-disclaimer');
     const openPrivacyBtn = document.getElementById('open-privacy');
-    const closeBtn = document.querySelector('.close-btn');
     const acceptBtn = document.getElementById('accept-terms');
 
     if (!modal) return;
+
+    const closeBtn = modal.querySelector('.close-btn');
 
     const openModal = (e, scrollTargetId = null) => {
         if (e) e.preventDefault();
@@ -220,6 +222,45 @@ function initModal() {
     if (openPrivacyBtn) {
         openPrivacyBtn.addEventListener('click', (e) => openModal(e, 'privacy'));
     }
+
+    const closeModal = () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (acceptBtn) acceptBtn.addEventListener('click', closeModal);
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+    });
+}
+
+// 8. Privacy Policy Modal
+function initPrivacyPolicyModal() {
+    const modal = document.getElementById('privacy-policy-modal');
+    const openBtn = document.getElementById('open-real-privacy');
+    const acceptBtn = document.getElementById('accept-privacy-policy');
+
+    if (!modal) return;
+
+    const closeBtn = modal.querySelector('.close-btn');
+
+    const openModal = (e) => {
+        if (e) e.preventDefault();
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+
+        // Scroll to top
+        const content = modal.querySelector('.modal-content');
+        if (content) content.scrollTop = 0;
+    };
+
+    if (openBtn) openBtn.addEventListener('click', openModal);
 
     const closeModal = () => {
         modal.style.display = 'none';
