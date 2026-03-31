@@ -275,7 +275,8 @@ h4 {
 
 .hero-img {
     max-width: 100%;
-    max-height: 400px;
+    max-height: 100%;
+    object-fit: contain;
     z-index: 1;
     filter: drop-shadow(0 0 30px rgba(255, 0, 0, 0.3));
     animation: float 6s ease-in-out infinite 1s;
@@ -927,6 +928,48 @@ h4 {
 }
 
 /* Responsive */
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .service-card-flip {
+        height: 280px;
+    }
+
+    .service-title-front {
+        font-size: 1rem;
+    }
+
+    .service-method-front {
+        font-size: 0.65rem;
+    }
+
+    .feature-tag {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+    }
+
+    .service-card-back .service-description {
+        font-size: 0.85rem;
+        padding: 0;
+    }
+
+    .service-card-back {
+        padding: 16px;
+    }
+
+    .service-overlay {
+        padding: 12px;
+    }
+
+    .service-features {
+        gap: 4px;
+        margin-top: 4px;
+    }
+}
+
 @media (max-width: 900px) {
     .hero-title {
         font-size: 3rem;
@@ -940,6 +983,11 @@ h4 {
     .hero-label,
     .hero-cta {
         justify-content: center;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .hero-visual {
