@@ -1,7 +1,4 @@
-# 🦅 MANUAL DE OPERACIONES: BÚNKER WEB (LANDING PAGE)
-
-**Proyecto:** OR ELSE - Landing Page
-**Clasificación:** Confidencial / Guía de Despliegue y Distribución
+# 🦅 MANUAL DE OPERACIONES: OR ELSE (LANDING PAGE)
 
 ## 1. VISIÓN GENERAL (The Web Bunker)
 Este repositorio contiene el perímetro visual de la aplicación OR ELSE. Es una página estática (HTML/CSS) diseñada para reclutar nuevos operativos.
@@ -13,28 +10,6 @@ La infraestructura está dividida estratégicamente para evadir las restriccione
 
 ## 2. RESTRICCIONES CRÍTICAS (Reglas de Combate)
 El Plan Spark de Firebase prohíbe estrictamente alojar archivos ejecutables (como .apk o .exe) para evitar la distribución de malware. Si se intenta subir un APK, el despliegue fallará con un Error 400.
-
-Para blindar el despliegue local contra este error, el archivo `firebase.json` está configurado para ignorar cualquier binario pesado:
-
-```json
-{
-  "hosting": {
-    "public": ".",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      "**/*.apk"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  }
-}
-```
 
 ## 3. PROTOCOLO DE DESPLIEGUE WEB (Actualización Visual)
 Cualquier cambio en los textos, colores o estructura de la Landing Page debe subirse a Firebase.
