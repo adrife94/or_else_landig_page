@@ -466,6 +466,21 @@ h4 {
     padding: 32px;
 }
 
+.back-card-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.3));
+}
+
+.back-card-title {
+    font-size: 1.2rem;
+    color: var(--primary-500);
+    margin-bottom: 16px;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .service-card-back .service-description {
     font-size: 1.05rem;
     line-height: 1.6;
